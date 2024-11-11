@@ -1,0 +1,7 @@
+DOMAIN = "stt_whisper"
+CONF_API_KEY = "api_key"
+CONF_LANG = "language"
+CONF_MODEL = "model"
+CONF_URL = "url"
+CONF_PROMPT = "prompt"
+CONF_TEMPERATURE = "temperature"
