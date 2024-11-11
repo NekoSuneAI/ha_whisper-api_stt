@@ -1,10 +1,14 @@
 import voluptuous as vol
 from homeassistant import config_entries
+from homeassistant.core import callback
 from .const import DOMAIN, CONF_API_KEY, CONF_LANG, CONF_MODEL, CONF_URL, CONF_PROMPT, CONF_TEMPERATURE
 import homeassistant.helpers.config_validation as cv
 
+@config_entries.HANDLERS.register(DOMAIN)
 class WhisperSTTConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     """Handle a config flow for Whisper STT."""
+
+    VERSION = 1
 
     async def async_step_user(self, user_input=None):
         """Handle the initial step."""
